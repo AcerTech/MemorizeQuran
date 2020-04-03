@@ -1,0 +1,572 @@
+[
+ {
+   "suraId": "1",
+   "suraName": "الفاتحة",
+   "totalAya": "7"
+ },
+ {
+   "suraId": "2",
+   "suraName": "البقرة",
+   "totalAya": "286"
+ },
+ {
+   "suraId": "3",
+   "suraName": "آل عمران",
+   "totalAya": "200"
+ },
+ {
+   "suraId": "4",
+   "suraName": "النساء",
+   "totalAya": "176"
+ },
+ {
+   "suraId": "5",
+   "suraName": "المائدة",
+   "totalAya": "120"
+ },
+ {
+   "suraId": "6",
+   "suraName": "الأنعام",
+   "totalAya": "165"
+ },
+ {
+   "suraId": "7",
+   "suraName": "الأعراف",
+   "totalAya": "206"
+ },
+ {
+   "suraId": "8",
+   "suraName": "الأنفال",
+   "totalAya": "75"
+ },
+ {
+   "suraId": "9",
+   "suraName": "التوبة",
+   "totalAya": "129"
+ },
+ {
+   "suraId": "10",
+   "suraName": "يونس",
+   "totalAya": "109"
+ },
+ {
+   "suraId": "11",
+   "suraName": "هود",
+   "totalAya": "123"
+ },
+ {
+   "suraId": "12",
+   "suraName": "يوسف",
+   "totalAya": "111"
+ },
+ {
+   "suraId": "13",
+   "suraName": "الرعد",
+   "totalAya": "43"
+ },
+ {
+   "suraId": "14",
+   "suraName": "إبراهيم",
+   "totalAya": "52"
+ },
+ {
+   "suraId": "15",
+   "suraName": "الحجر",
+   "totalAya": "99"
+ },
+ {
+   "suraId": "16",
+   "suraName": "النحل",
+   "totalAya": "128"
+ },
+ {
+   "suraId": "17",
+   "suraName": "الإسراء",
+   "totalAya": "111"
+ },
+ {
+   "suraId": "18",
+   "suraName": "الكهف",
+   "totalAya": "110"
+ },
+ {
+   "suraId": "19",
+   "suraName": "مريم",
+   "totalAya": "98"
+ },
+ {
+   "suraId": "20",
+   "suraName": "طه",
+   "totalAya": "135"
+ },
+ {
+   "suraId": "21",
+   "suraName": "الأنبياء",
+   "totalAya": "112"
+ },
+ {
+   "suraId": "22",
+   "suraName": "الحج",
+   "totalAya": "78"
+ },
+ {
+   "suraId": "23",
+   "suraName": "المؤمنون",
+   "totalAya": "118"
+ },
+ {
+   "suraId": "24",
+   "suraName": "النور",
+   "totalAya": "64"
+ },
+ {
+   "suraId": "25",
+   "suraName": "الفرقان",
+   "totalAya": "77"
+ },
+ {
+   "suraId": "26",
+   "suraName": "الشعراء",
+   "totalAya": "227"
+ },
+ {
+   "suraId": "27",
+   "suraName": "النمل",
+   "totalAya": "93"
+ },
+ {
+   "suraId": "28",
+   "suraName": "القصص",
+   "totalAya": "88"
+ },
+ {
+   "suraId": "29",
+   "suraName": "العنكبوت",
+   "totalAya": "69"
+ },
+ {
+   "suraId": "30",
+   "suraName": "الروم",
+   "totalAya": "60"
+ },
+ {
+   "suraId": "31",
+   "suraName": "لقمان",
+   "totalAya": "34"
+ },
+ {
+   "suraId": "32",
+   "suraName": "السجدة",
+   "totalAya": "30"
+ },
+ {
+   "suraId": "33",
+   "suraName": "الأحزاب",
+   "totalAya": "73"
+ },
+ {
+   "suraId": "34",
+   "suraName": "سبأ",
+   "totalAya": "54"
+ },
+ {
+   "suraId": "35",
+   "suraName": "فاطر",
+   "totalAya": "45"
+ },
+ {
+   "suraId": "36",
+   "suraName": "يس",
+   "totalAya": "83"
+ },
+ {
+   "suraId": "37",
+   "suraName": "الصافات",
+   "totalAya": "181"
+ },
+ {
+   "suraId": "38",
+   "suraName": "ص",
+   "totalAya": "88"
+ },
+ {
+   "suraId": "39",
+   "suraName": "الزمر",
+   "totalAya": "75"
+ },
+ {
+   "suraId": "40",
+   "suraName": "غافر",
+   "totalAya": "85"
+ },
+ {
+   "suraId": "41",
+   "suraName": "فصلت",
+   "totalAya": "54"
+ },
+ {
+   "suraId": "42",
+   "suraName": "الشورى",
+   "totalAya": "53"
+ },
+ {
+   "suraId": "43",
+   "suraName": "الزخرف",
+   "totalAya": "89"
+ },
+ {
+   "suraId": "44",
+   "suraName": "الدخان",
+   "totalAya": "59"
+ },
+ {
+   "suraId": "45",
+   "suraName": "الجاثية",
+   "totalAya": "37"
+ },
+ {
+   "suraId": "46",
+   "suraName": "الأحقاف",
+   "totalAya": "35"
+ },
+ {
+   "suraId": "47",
+   "suraName": "محمد",
+   "totalAya": "38"
+ },
+ {
+   "suraId": "48",
+   "suraName": "الفتح",
+   "totalAya": "29"
+ },
+ {
+   "suraId": "49",
+   "suraName": "الحجرات",
+   "totalAya": "18"
+ },
+ {
+   "suraId": "50",
+   "suraName": "ق",
+   "totalAya": "45"
+ },
+ {
+   "suraId": "51",
+   "suraName": "الذاريات",
+   "totalAya": "60"
+ },
+ {
+   "suraId": "52",
+   "suraName": "الطور",
+   "totalAya": "49"
+ },
+ {
+   "suraId": "53",
+   "suraName": "النجم",
+   "totalAya": "62"
+ },
+ {
+   "suraId": "54",
+   "suraName": "القمر",
+   "totalAya": "55"
+ },
+ {
+   "suraId": "55",
+   "suraName": "الرحمن",
+   "totalAya": "78"
+ },
+ {
+   "suraId": "56",
+   "suraName": "الواقعة",
+   "totalAya": "96"
+ },
+ {
+   "suraId": "57",
+   "suraName": "الحديد",
+   "totalAya": "29"
+ },
+ {
+   "suraId": "58",
+   "suraName": "المجادلة",
+   "totalAya": "22"
+ },
+ {
+   "suraId": "59",
+   "suraName": "الحشر",
+   "totalAya": "24"
+ },
+ {
+   "suraId": "60",
+   "suraName": "الممتحنة",
+   "totalAya": "13"
+ },
+ {
+   "suraId": "61",
+   "suraName": "الصف",
+   "totalAya": "14"
+ },
+ {
+   "suraId": "62",
+   "suraName": "الجمعة",
+   "totalAya": "11"
+ },
+ {
+   "suraId": "63",
+   "suraName": "المنافقون",
+   "totalAya": "11"
+ },
+ {
+   "suraId": "64",
+   "suraName": "التغابن",
+   "totalAya": "18"
+ },
+ {
+   "suraId": "65",
+   "suraName": "الطلاق",
+   "totalAya": "12"
+ },
+ {
+   "suraId": "66",
+   "suraName": "التحريم",
+   "totalAya": "12"
+ },
+ {
+   "suraId": "67",
+   "suraName": "الملك",
+   "totalAya": "30"
+ },
+ {
+   "suraId": "68",
+   "suraName": "القلم",
+   "totalAya": "52"
+ },
+ {
+   "suraId": "69",
+   "suraName": "الحاقة",
+   "totalAya": "52"
+ },
+ {
+   "suraId": "70",
+   "suraName": "المعارج",
+   "totalAya": "44"
+ },
+ {
+   "suraId": "71",
+   "suraName": "نوح",
+   "totalAya": "28"
+ },
+ {
+   "suraId": "72",
+   "suraName": "الجن",
+   "totalAya": "28"
+ },
+ {
+   "suraId": "73",
+   "suraName": "المزّمِّل",
+   "totalAya": "20"
+ },
+ {
+   "suraId": "74",
+   "suraName": "المدّثر",
+   "totalAya": "56"
+ },
+ {
+   "suraId": "75",
+   "suraName": "القيامة",
+   "totalAya": "40"
+ },
+ {
+   "suraId": "76",
+   "suraName": "الإنسان",
+   "totalAya": "31"
+ },
+ {
+   "suraId": "77",
+   "suraName": "المرسلات",
+   "totalAya": "50"
+ },
+ {
+   "suraId": "78",
+   "suraName": "النبأ",
+   "totalAya": "40"
+ },
+ {
+   "suraId": "79",
+   "suraName": "النازعات",
+   "totalAya": "46"
+ },
+ {
+   "suraId": "80",
+   "suraName": "عبس",
+   "totalAya": "42"
+ },
+ {
+   "suraId": "81",
+   "suraName": "التكوير",
+   "totalAya": "29"
+ },
+ {
+   "suraId": "82",
+   "suraName": "الإنفطار",
+   "totalAya": "19"
+ },
+ {
+   "suraId": "83",
+   "suraName": "المطففين",
+   "totalAya": "36"
+ },
+ {
+   "suraId": "84",
+   "suraName": "الانشقاق",
+   "totalAya": "25"
+ },
+ {
+   "suraId": "85",
+   "suraName": "البروج",
+   "totalAya": "22"
+ },
+ {
+   "suraId": "86",
+   "suraName": "الطارق",
+   "totalAya": "17"
+ },
+ {
+   "suraId": "87",
+   "suraName": "الأعلى",
+   "totalAya": "19"
+ },
+ {
+   "suraId": "88",
+   "suraName": "الغاشية",
+   "totalAya": "26"
+ },
+ {
+   "suraId": "89",
+   "suraName": "الفجر",
+   "totalAya": "30"
+ },
+ {
+   "suraId": "90",
+   "suraName": "البلد",
+   "totalAya": "20"
+ },
+ {
+   "suraId": "91",
+   "suraName": "الشمس",
+   "totalAya": "15"
+ },
+ {
+   "suraId": "92",
+   "suraName": "الليل",
+   "totalAya": "21"
+ },
+ {
+   "suraId": "93",
+   "suraName": "الضحى",
+   "totalAya": "11"
+ },
+ {
+   "suraId": "94",
+   "suraName": "الشرح",
+   "totalAya": "8"
+ },
+ {
+   "suraId": "95",
+   "suraName": "التين",
+   "totalAya": "8"
+ },
+ {
+   "suraId": "96",
+   "suraName": "العلق",
+   "totalAya": "19"
+ },
+ {
+   "suraId": "97",
+   "suraName": "القدر",
+   "totalAya": "5"
+ },
+ {
+   "suraId": "98",
+   "suraName": "البينة",
+   "totalAya": "8"
+ },
+ {
+   "suraId": "99",
+   "suraName": "الزلزلة",
+   "totalAya": "8"
+ },
+ {
+   "suraId": "100",
+   "suraName": "العاديات",
+   "totalAya": "11"
+ },
+ {
+   "suraId": "101",
+   "suraName": "القارعة",
+   "totalAya": "11"
+ },
+ {
+   "suraId": "102",
+   "suraName": "التكاثر",
+   "totalAya": "8"
+ },
+ {
+   "suraId": "103",
+   "suraName": "العصر",
+   "totalAya": "3"
+ },
+ {
+   "suraId": "104",
+   "suraName": "الهُمَزَة",
+   "totalAya": "9"
+ },
+ {
+   "suraId": "105",
+   "suraName": "الفيل",
+   "totalAya": "5"
+ },
+ {
+   "suraId": "106",
+   "suraName": "قريش",
+   "totalAya": "4"
+ },
+ {
+   "suraId": "107",
+   "suraName": "الماعون",
+   "totalAya": "7"
+ },
+ {
+   "suraId": "108",
+   "suraName": "الكوثر",
+   "totalAya": "3"
+ },
+ {
+   "suraId": "109",
+   "suraName": "الكافرون",
+   "totalAya": "6"
+ },
+ {
+   "suraId": "110",
+   "suraName": "النصر",
+   "totalAya": "3"
+ },
+ {
+   "suraId": "111",
+   "suraName": "المسد",
+   "totalAya": "5"
+ },
+ {
+   "suraId": "112",
+   "suraName": "الإخلاص",
+   "totalAya": "4"
+ },
+ {
+   "suraId": "113",
+   "suraName": "الفلق",
+   "totalAya": "5"
+ },
+ {
+   "suraId": "114",
+   "suraName": "الناس",
+   "totalAya": "6"
+ }
+]
