@@ -95,7 +95,7 @@ text-rendering: optimizeLegibility;
 
 @font-face {
   font-family: "uthmanic";
-  src: url("/assets/fonts/uthmanic.ttf") format("truetype");
+  src: url("https://acertech.github.io/MemorizeQuran/assets/fonts/uthmanic.ttf") format("truetype");
   }
 
 .aya.hover {

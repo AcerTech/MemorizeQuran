@@ -77,7 +77,7 @@ export class AyahComponent implements OnInit {
     this.sura.fromVerse = formValues.fromVerse
     this.sura.toVerse = formValues.toVerse
     this.sura.hideVerses = formValues.hideVerses
-    console.log('surea ' + this.sura)
+    console.log('sura ' + this.sura)
     localStorage.setItem("suraInfo", JSON.stringify(this.sura));
   }
 
