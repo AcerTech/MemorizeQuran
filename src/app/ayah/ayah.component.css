@@ -135,7 +135,7 @@ text-rendering: optimizeLegibility;
 
 .besm {
   text-align: center;
-  font-family: "Traditional Arabic", "Montserrat","sans-serif","Times New Roman";
+  font-family: "uthmanic","Traditional Arabic", "Montserrat","sans-serif","Times New Roman";
   font-size: 30px;
 }
 
