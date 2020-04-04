@@ -1,10 +1,8 @@
 export class Ayah {
     public suraId: number;
-    public suraName: string;
-    public partNumber: string;
     public verseId: number;
     public ayahText: string;
-    public pageNumber: number;
+    public pageNumber: string;
 }
 
 // "SuraID": "1",

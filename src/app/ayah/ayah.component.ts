@@ -24,11 +24,11 @@ export class AyahComponent implements OnInit {
   suraForm: FormGroup;
   suraVersesNumbersArray: number[] = []
 
-  sura: any = {
-    suraId: 1,
-    fromVerse: 0,
-    toVerse: 0,
-    hideVerses: false
+  sura: {
+    suraId: number,
+    fromVerse: number,
+    toVerse: number,
+    hideVerses: boolean
   }
 
   ayahTrimed: string
@@ -39,6 +39,10 @@ export class AyahComponent implements OnInit {
 
 
   ngOnInit() {
+
+ 
+    this.getSuraIndexes()
+    
     this.suraForm = this.fb.group({
       suraId: [1],
       fromVerse: [1],
@@ -46,24 +50,22 @@ export class AyahComponent implements OnInit {
       hideVerses: [false],
     })
 
+    // this.suraForm.controls['suraId'].patchValue(1)
+    // this.suraForm.controls['fromVerse'].patchValue(1)
+    // this.suraForm.controls['toVerse'].patchValue(7)
+
     var suraInfo = JSON.parse(localStorage.getItem("suraInfo"));
     console.log(suraInfo)
-    if (suraInfo != null) {
-      // this.sura.suraId = suraInfo.suraId;
-      // this.sura.fromVerse = suraInfo.fromVerse;
-      // this.sura.toVerse = suraInfo.toVerse;
-      // this.sura.hideVerses = suraInfo.hideVerses;
+    if (suraInfo != null && suraInfo != undefined) {
       this.hideVerses = suraInfo.hideVerses;
-      this.suraForm = this.fb.group({
-        suraId: [suraInfo.suraId],
-        fromVerse: [suraInfo.fromVerse],
-        toVerse: [suraInfo.toVerse],
-        hideVerses: [suraInfo.hideVerses],
-      })
+      this.suraForm.reset();
+      this.suraForm.controls['suraId'].patchValue(suraInfo.suraId)
+      this.suraForm.controls['fromVerse'].patchValue(suraInfo.fromVerse)
+      this.suraForm.controls['toVerse'].patchValue(suraInfo.toVerse)
     }
 
+    
     this.getAyat()
-    this.getSuraIndexes()
     this.openNav()
   }
 
@@ -90,12 +92,17 @@ export class AyahComponent implements OnInit {
 
   storeFormData() {
     var formValues = this.suraForm.getRawValue();
-    this.sura.suraId = formValues.suraId
-    this.sura.fromVerse = formValues.fromVerse
-    this.sura.toVerse = formValues.toVerse
-    this.sura.hideVerses = formValues.hideVerses
-    console.log('sura ' + this.sura)
-    localStorage.setItem("suraInfo", JSON.stringify(this.sura));
+    // this.sura.suraId = formValues.suraId
+    // this.sura.fromVerse = formValues.fromVerse
+    // this.sura.toVerse = formValues.toVerse
+    // this.sura.hideVerses = formValues.hideVerses
+    // console.log('sura ' + this.sura)
+    localStorage.setItem("suraInfo", JSON.stringify({
+      suraId: formValues.suraId,
+      fromVerse: formValues.fromVerse,
+      toVerse: formValues.toVerse,
+      hideVerses: this.hideVerses
+    }));
   }
 
   getFilteredVerses() {
@@ -105,11 +112,10 @@ export class AyahComponent implements OnInit {
     // console.log(formValues)
     if (this.allVerses.length > 0) {
       this.filteredVerses = []
-      this.filteredVerses = this.allVerses.filter(el => (el.suraId == formValues.suraId) && el.verseId >= Number(formValues.fromVerse) && el.verseId <= parseInt(formValues.toVerse))
+      this.filteredVerses = this.allVerses.filter(el => (el.suraId == formValues.suraId) && el.verseId >= Number(formValues.fromVerse) && el.verseId <= Number(formValues.toVerse))
 
       this.getSuraInfo()
       this.fillSuraVersesNumbersArray()
-      this.storeFormData()
     }
 
   }
@@ -120,9 +126,10 @@ export class AyahComponent implements OnInit {
     this.selectedSuraName = this.suraIndexes.filter(x => x.suraId === formValues.suraId).map(x => x.suraName).toString()
     this.totalAyat = Number(this.suraIndexes.filter(x => x.suraId == formValues.suraId).map(x => x.totalAya))
   }
+
   fillSuraVersesNumbersArray() {
     var formValues = this.suraForm.getRawValue();
-    // var totalAyat = Number(this.suraIndexes.filter(x => x.suraId == formValues.suraId).map(x => x.totalAya))
+     this.totalAyat = Number(this.suraIndexes.filter(x => x.suraId == formValues.suraId).map(x => x.totalAya))
     this.suraVersesNumbersArray = []
     for (let index = 1; index < this.totalAyat + 1; index++) {
       this.suraVersesNumbersArray.push(index);
@@ -132,14 +139,17 @@ export class AyahComponent implements OnInit {
   suraChanged() {
     this.fillSuraVersesNumbersArray()
     var formValues = this.suraForm.getRawValue();
+    this.totalAyat = null
     this.totalAyat = Number(this.suraIndexes.filter(x => x.suraId == formValues.suraId).map(x => x.totalAya))
 
     this.filteredVerses = []
     this.filteredVerses = this.allVerses.filter(el => (el.suraId == formValues.suraId))// && el.verseId >= Number(formValues.fromVerse) && el.verseId <= this.totalAyat)
-    this.selectedSuraName = this.filteredVerses[0].suraName
-    console.log(this.totalAyat)
-    this.suraForm.controls['toVerse'].patchValue(this.totalAyat)
+    this.selectedSuraName = this.suraIndexes.filter(x => x.suraId === formValues.suraId).map(x => x.suraName).toString()
+    this.totalAyat = Number(this.suraIndexes.filter(x => x.suraId == formValues.suraId).map(x => x.totalAya))
+    // console.log(this.totalAyat)
+    this.suraForm.controls['toVerse'].patchValue(this.totalAyat.toString())
     this.suraForm.controls['fromVerse'].patchValue(1)
+    // this.getSuraInfo()
     this.storeFormData()
   }
 
