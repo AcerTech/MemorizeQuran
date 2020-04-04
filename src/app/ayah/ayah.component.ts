@@ -40,9 +40,7 @@ export class AyahComponent implements OnInit {
 
   ngOnInit() {
 
- 
-    this.getSuraIndexes()
-    
+
     this.suraForm = this.fb.group({
       suraId: [1],
       fromVerse: [1],
@@ -54,7 +52,15 @@ export class AyahComponent implements OnInit {
     // this.suraForm.controls['fromVerse'].patchValue(1)
     // this.suraForm.controls['toVerse'].patchValue(7)
 
+
+    this.getSuraIndexes()
+    this.getAyat()
+    this.openNav()
+  }
+
+  ngAfterViewChecked() {
     var suraInfo = JSON.parse(localStorage.getItem("suraInfo"));
+    this.hideVerses = suraInfo.hideVerses;
     console.log(suraInfo)
     if (suraInfo != null && suraInfo != undefined) {
       this.hideVerses = suraInfo.hideVerses;
@@ -62,12 +68,11 @@ export class AyahComponent implements OnInit {
       this.suraForm.controls['suraId'].patchValue(suraInfo.suraId)
       this.suraForm.controls['fromVerse'].patchValue(suraInfo.fromVerse)
       this.suraForm.controls['toVerse'].patchValue(suraInfo.toVerse)
-    }
+      this.suraForm.controls['hideVerses'].patchValue(suraInfo.hideVerses)
 
-    
-    this.getAyat()
-    this.openNav()
+    }
   }
+
 
   toggle(rowIndex: number) {
     this.show = !this.show
@@ -125,11 +130,12 @@ export class AyahComponent implements OnInit {
 
     this.selectedSuraName = this.suraIndexes.filter(x => x.suraId === formValues.suraId).map(x => x.suraName).toString()
     this.totalAyat = Number(this.suraIndexes.filter(x => x.suraId == formValues.suraId).map(x => x.totalAya))
+    this.storeFormData();
   }
 
   fillSuraVersesNumbersArray() {
     var formValues = this.suraForm.getRawValue();
-     this.totalAyat = Number(this.suraIndexes.filter(x => x.suraId == formValues.suraId).map(x => x.totalAya))
+    this.totalAyat = Number(this.suraIndexes.filter(x => x.suraId == formValues.suraId).map(x => x.totalAya))
     this.suraVersesNumbersArray = []
     for (let index = 1; index < this.totalAyat + 1; index++) {
       this.suraVersesNumbersArray.push(index);
@@ -153,6 +159,22 @@ export class AyahComponent implements OnInit {
     this.storeFormData()
   }
 
+
+  getSuraIndexes() {
+    this.ayahService.getSuraIndexes()
+      .subscribe(
+        _data => this.suraIndexes = _data,
+        error => this.errorMsg = <any>error,
+        () => {
+          // console.log(this.suraIndexes)
+        }
+      )
+  }
+
+  toggleHideVerses() {
+    this.hideVerses = !this.hideVerses
+    this.storeFormData()
+  }
 
 
   replaceAll(orgTxt, replacement) {
@@ -190,21 +212,6 @@ export class AyahComponent implements OnInit {
   }
 
 
-  getSuraIndexes() {
-    this.ayahService.getSuraIndexes()
-      .subscribe(
-        _data => this.suraIndexes = _data,
-        error => this.errorMsg = <any>error,
-        () => {
-          // console.log(this.suraIndexes)
-        }
-      )
-  }
-
-  toggleHideVerses() {
-    this.hideVerses = !this.hideVerses
-    this.storeFormData()
-  }
 
   openNav() {
     document.getElementById("mySidenav").style.width = "100%";

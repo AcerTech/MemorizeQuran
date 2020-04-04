@@ -2,7 +2,7 @@ export class Ayah {
     public suraId: number;
     public verseId: number;
     public ayahText: string;
-    public pageNumber: string;
+    public pageNumber: number;
 }
 
 // "SuraID": "1",
