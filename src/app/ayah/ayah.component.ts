@@ -48,11 +48,6 @@ export class AyahComponent implements OnInit {
       hideVerses: [false],
     })
 
-    // this.suraForm.controls['suraId'].patchValue(1)
-    // this.suraForm.controls['fromVerse'].patchValue(1)
-    // this.suraForm.controls['toVerse'].patchValue(7)
-
-
     this.getSuraIndexes()
     this.getAyat()
     this.openNav()
@@ -61,7 +56,7 @@ export class AyahComponent implements OnInit {
   ngAfterViewChecked() {
     var suraInfo = JSON.parse(localStorage.getItem("suraInfo"));
     this.hideVerses = suraInfo.hideVerses;
-    console.log(suraInfo)
+    // console.log(suraInfo)
     if (suraInfo != null && suraInfo != undefined) {
       this.hideVerses = suraInfo.hideVerses;
       this.suraForm.reset();
