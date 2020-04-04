@@ -56,45 +56,54 @@
 
 
     <form class="form-row" [formGroup]="suraForm" validate>
-        <div class="col-6" style="align-content: center;padding-left: 30px;">
-            <select class="form-control" formControlName="suraId" id="suraId" (change)="suraChanged()" min='1'>
-                <option *ngFor="let suraIndex of suraIndexes" [ngValue]="suraIndex.suraId">
-                    {{suraIndex.suraId}} - {{suraIndex.suraName}}
-                </option>
-            </select>
-        </div>
-
-
         <a class="closebtn" style="color: lawngreen;" (click)="closeNav()">&times;</a>
-        <div>
-            <div class="row">
-                <div class="col">
 
-                    <label class="checkbox-inline" for="checkboxes-0"
-                        style="padding-left: 10px;font-size: 20px; text-align: right; ">
-                        اخفاء الايات
-                        <input type="checkbox" name="checkboxes" formControlName="hideVerses" id="checkboxes" value="1"
-                            (change)="toggleHideVerses()">
-                    </label>
+        <div class="row">
+            <div class="col-sm" style="padding-left: 70px;width: 350px;direction:rtl;font-size: 14px !important;">
+                <select class="form-control" formControlName="suraId" id="suraId" (change)="suraChanged()">
+                    <option *ngFor="let suraIndex of suraIndexes" [ngValue]="suraIndex.suraId">
+                        {{suraIndex.suraId}} - {{suraIndex.suraName}}
+                    </option>
+                </select>
+            </div>
 
-                </div>
-                <div class="col" style="padding: 5px;">
-                    <input type="number" formControlName="toVerse" class="form-control" (keyup)="getFilteredVerses()">
-                </div>
-                <br />
-                الى
-                <div class="col" style="padding: 5px;">
-                    <input type="number" formControlName="fromVerse" class="form-control" (keyup)="getFilteredVerses()">
-                </div>
-                <div class="col" style="padding: 5px;padding-right: 25px;">
+            <div class="col-sm" style="text-align: right; padding-top: 5px;">
 
-                    <label>عرض الايات<br /> من</label>
+                <div class="row" style="text-align: right;">
+                    <div class="col"></div>
+
+                    <select class="col form-control" formControlName="toVerse" id="toVerse"
+                        (change)="getFilteredVerses()" style="direction: rtl;font-size: 14px;">
+                        <option *ngFor="let v of suraVersesNumbersArray">
+                            {{v}}
+                        </option>
+                    </select>
+
+                    <label class="col" style="font-size: 14px;text-align: left !important;">الى الايه</label>
+
+                    <select class="col form-control" formControlName="fromVerse" id="fromVerse"
+                        (change)="getFilteredVerses()" style="direction: rtl;font-size: 14px;">
+                        <option *ngFor="let v of suraVersesNumbersArray">
+                            {{v}}
+                        </option>
+                    </select>
+
+                    <label class="col" style="font-size: 14px;text-align: left !important;">من الايه</label>
+                    <!-- <div class="col"></div> -->
                 </div>
+
+            </div>
+
+            <div class="col-sm" style="font-size: 14px;text-align: center !important;font-weight: bold;">
+
+                <label class="checkbox-inline" for="checkboxes-0">
+                    اخفاء الايات
+                    <input type="checkbox" name="checkboxes" formControlName="hideVerses" id="checkboxes" value="1"
+                        (change)="toggleHideVerses()">
+                </label>
             </div>
         </div>
-
     </form>
-
 </div>
 
 
