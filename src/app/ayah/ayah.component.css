@@ -74,10 +74,10 @@
   text-align:center !important;
   direction: rtl !important;
   font-family: "uthmanic","Traditional Arabic", "Montserrat","sans-serif","Times New Roman";
-  font-size: 30px;
+  font-size: 25px;
   /* text-align: right; */
   /* width: 412px; */
-  /* margin: 0px 30px; */
+  /* margin: 0px 25px; */
   /* padding: 16px 14px; */
   color: black;
   text-rendering: optimizeLegibility;
@@ -88,7 +88,7 @@
   /* background-color: #F7FCE3; */
   font-family: "uthmanic","Traditional Arabic", "Montserrat","sans-serif","Times New Roman";
   
-  font-size: 30px;
+  font-size: 25px;
 text-align: center;
 text-rendering: optimizeLegibility;
 }
@@ -136,7 +136,7 @@ text-rendering: optimizeLegibility;
 .besm {
   text-align: center;
   font-family: "uthmanic","Traditional Arabic", "Montserrat","sans-serif","Times New Roman";
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .transText .aya.selected,
